@@ -10,7 +10,6 @@
     cell.text(`${key}: ${value}`);
   });
    var WF=d.WFREQ
-   console.log(WF)
 
 
 // Trig to calc meter point
@@ -85,8 +84,6 @@ function buildCharts(sample) {
    d3.json(`/samples/${sample}`).then(function(d, i){
     Plotly.purge('pie')
     Plotly.purge('bubble')
-      console.log(i)
-      console.log(d)
       tempV=d.sample_values.slice(0,10)
       tempN=d.otu_labels.slice(0,10)
     var data=[{
